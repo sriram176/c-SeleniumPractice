@@ -14,8 +14,9 @@ namespace NUnit.Tests3
     [TestFixture]
     public class ParallelTestClass : BrowserUtility
     {
-        IWebDriver driver;
+        
         [Test,Category("Parallel Testing")]
+        [Parallelizable]
         public void TestMethod()
         {
             var Driver = new BrowserUtility().Init(driver);
@@ -24,6 +25,7 @@ namespace NUnit.Tests3
 
         }
         [Test, Category("Parallel Testing")]
+        [Parallelizable]
         public void TestMethod1()
         {
             var Driver = new BrowserUtility().Init(driver);
@@ -32,6 +34,7 @@ namespace NUnit.Tests3
 
         }
         [Test, Category("Parallel Testing")]
+        [Parallelizable]
         public void TestMethod2()
         {
             var Driver = new BrowserUtility().Init(driver);
@@ -43,3 +46,5 @@ namespace NUnit.Tests3
 
     }
 }
+
+// Parallel Testing can also be acheived by changing the level of parallelizam in properties>assembly.info file without using parallelizable attribute
