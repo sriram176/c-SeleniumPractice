@@ -23,7 +23,7 @@ namespace NUnit.Tests3
             Thread.Sleep(5000);
 
             jse.ExecuteScript("document.getElementById('search-icon-legacy').click()");
-            Thread.Sleep(10000);
+            Thread.Sleep(5000);
 
 
         }
