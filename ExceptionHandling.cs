@@ -27,6 +27,10 @@ namespace NUnit.Tests3
             {
                 Console.WriteLine(e.StackTrace);
             }
+            finally
+            {
+                driver.Quit();
+            }
      
         }
      
